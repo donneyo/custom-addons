@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="StockUsage_form_view">
+            <field name="name">StockUsage.form</field>
+            <field name="model">usage</field>
+            <field name="arch" type="xml">
+                <form string="StockUsage Form">
+                       <sheet>
+                           <group>
+                           <group>
+                            <field name="product_id"/>x
+                            <field name="collected_id"/>
+                            <field name="quantity_id"/>
+                           </group>
+                           <group>
+                            <field name="quantity_left_id"/>
+                            <field name="date_returned"/>
+                            <field name="collected_date"/>
+                           </group>
+                           </group>
+                       </sheet>
+                </form>
+            </field>
+        </record>
+
+         <record model="ir.ui.view" id="StockUsage_tree_view">
+            <field name="name">StockUsage.tree</field>
+            <field name="model">usage</field>
+            <field name="arch" type="xml">
+                <tree string="Test tree" >
+                            <field name="product_id"/>
+                            <field name="collected_id"/>
+                            <field name="quantity_id"/>
+                            <field name="quantity_left_id"/>
+                            <field name="date_returned"/>
+                            <field name="collected_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="StockUsage_action">
+            <field name="name">StockUsage</field>
+            <field name="res_model">usage</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'search_default_my_courses': 1}"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first Product
+                </p>
+            </field>
+    </record>
+
+          <menuitem id="StockUsage_menu" parent="openacademy_menu" name="StockUsage"
+          action="StockUsage_action"/>
+
+
+    </data>
+</odoo>
