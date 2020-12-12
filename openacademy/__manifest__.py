@@ -28,12 +28,8 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
-        # 'security/ir.model.access.csv',
-        # 'templates.xml',
         'views/openacademy.xml',
         'views/partner.xml',
-        'views/StockUsage.xml',
-        # 'views/site_usage.xml',
         'views/session_workflow.xml',
         'reports.xml',
     ],
